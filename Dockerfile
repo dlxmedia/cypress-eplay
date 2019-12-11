@@ -1,9 +1,10 @@
-FROM cypress/browsers:chrome69
+ARG CYPRESS_VERSION="3.7.0"
+ARG BROWSER="chrome69"
+FROM cypress/browsers:$BROWSER
 
 # avoid too many progress messages
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1
-ARG CYPRESS_VERSION="3.7.0"
 
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
