@@ -6,7 +6,7 @@ FROM cypress/browsers:$BROWSER
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1
 
-RUN apt-get update && apt-get install -y xvfb libxi6 libgconf-2-4 libdbus-1-dev
+RUN apt-get update && apt-get install -y xvfb libxi6 libgconf-2-4 libdbus-glib-1-dev dbus libdbus-1-dev
 
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
