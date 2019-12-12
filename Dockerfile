@@ -6,8 +6,6 @@ FROM cypress/browsers:$BROWSER
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1
 
-RUN apt-get update && apt-get install -y libdbus-1-3
-
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
 RUN npm install -g "cypress@${CYPRESS_VERSION}"
