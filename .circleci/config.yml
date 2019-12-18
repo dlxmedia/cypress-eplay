@@ -7,9 +7,9 @@ workflows:
         jobs:
             -   docker/publish:
                     image: dlxmedia/docker-cypress
-                    tag: '3.7.0'
-                    extra_build_args: '--build-arg CYPRESS_VERSION=3.7.0 --build-arg BROWSER=chrome69'
+                    tag: '3.8.0'
+                    extra_build_args: '--build-arg CYPRESS_VERSION=3.8.0 --build-arg BROWSER=chrome69'
             -   docker/publish:
                     image: dlxmedia/docker-cypress
                     tag: latest
-                    extra_build_args: '--build-arg CYPRESS_VERSION=3.7.0 --build-arg BROWSER=chrome69'
+                    extra_build_args: '--build-arg CYPRESS_VERSION=3.8.0 --build-arg BROWSER=chrome69'
