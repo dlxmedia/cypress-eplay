@@ -5,4 +5,4 @@ A specialized box containing:
 
 * Google Chrome binaries: v69
 * Node: v10
-* Cypress: v3.7.0
+* Cypress: v4.3.0
