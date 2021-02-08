@@ -1,5 +1,5 @@
 ARG CYPRESS_VERSION="6.4.0"
-ARG BROWSER="chrome69"
+ARG BROWSER="node12.18.3-chrome87-ff82"
 FROM cypress/browsers:$BROWSER
 
 # avoid too many progress messages
