@@ -3,6 +3,6 @@ Docker image for cypress tests
 
 A specialized box containing:
 
-* Google Chrome binaries: v69
-* Node: v10
+* Google Chrome binaries: v87
+* Node: v12
 * Cypress: v6.4.0
