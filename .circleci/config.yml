@@ -8,8 +8,8 @@ workflows:
       - docker/publish:
           image: dlxmedia/docker-cypress
           tag: '9.5.4-node14.17.6-chrome100-ff98'
-          extra_build_args: '--build-arg CYPRESS_VERSION=9.5.4 --build-arg BROWSER=node14.17.6-chrome100-ff98'
+          extra_build_args: '--build-arg BROWSER=node14.17.6-chrome100-ff98'
       - docker/publish:
           image: dlxmedia/docker-cypress
           tag: latest
-          extra_build_args: '--build-arg CYPRESS_VERSION=9.5.4 --build-arg BROWSER=node14.17.6-chrome100-ff98'
+          extra_build_args: '--build-arg BROWSER=node14.17.6-chrome100-ff98'
