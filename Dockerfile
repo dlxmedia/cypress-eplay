@@ -12,8 +12,8 @@ RUN npm uninstall -g cypress && npm install --save-dev "cypress@${CYPRESS_VERSIO
 RUN $(npm bin)/cypress verify
 
 # Cypress cache and installed version
-RUN cypress cache path
-RUN cypress cache list
+RUN $(npm bin)/cypress cache path
+RUN $(npm bin)/cypress cache list
 
 RUN echo  " node version:    $(node -v) \n" \
   "npm version:     $(npm -v) \n" \
