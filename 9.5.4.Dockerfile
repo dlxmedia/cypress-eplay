@@ -5,6 +5,8 @@ FROM cypress/browsers:$BROWSER
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1
 
+WORKDIR /usr/app
+
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
 RUN npm install cypress@9.5.4
@@ -19,6 +21,7 @@ RUN npm install typescript \
     cypress-xpath@1.6.2 \
     nanoid@3.1.31 \
     unfetch@4.2.0
+
 RUN $(npm bin)/cypress verify
 RUN $(npm bin)/cypress install
 
