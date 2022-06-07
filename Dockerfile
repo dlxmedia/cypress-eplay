@@ -10,14 +10,15 @@ WORKDIR /usr/app
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
 RUN npm install cypress@10.0.3
-RUN npm install cypress-cucumber-preprocessor \
-    cypress-xpath \
+RUN npm install typescript \
     @cypress/browserify-preprocessor \
     @testing-library/cypress \
-    cypress-file-upload \
-    @types/testing-library__cypress \
-    unfetch \
     @types/cypress-cucumber-preprocessor \
+    @types/testing-library__cypress \
+    cypress-cucumber-preprocessor \
+    cypress-file-upload \
+    cypress-xpath \
+    unfetch
 
 RUN $(npm bin)/cypress verify
 RUN $(npm bin)/cypress install
