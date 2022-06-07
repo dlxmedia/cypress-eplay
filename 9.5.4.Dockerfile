@@ -1,4 +1,4 @@
-ARG BROWSER="node16.13.2-chrome100-ff98"
+ARG BROWSER="node14.17.6-chrome100-ff98"
 FROM cypress/browsers:$BROWSER
 
 # avoid too many progress messages
@@ -7,16 +7,8 @@ ENV CI=1
 
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
-RUN npm install cypress@10.0.3
-RUN npm install cypress-cucumber-preprocessor \
-    cypress-xpath \
-    @cypress/browserify-preprocessor \
-    @testing-library/cypress \
-    cypress-file-upload \
-    @types/testing-library__cypress \
-    unfetch \
-    @types/cypress-cucumber-preprocessor \
-
+RUN npm install cypress@9.5.4
+RUN npm install cypress-cucumber-preprocessor@4.0.3 cypress-xpath@1.6.2 @cypress/browserify-preprocessor@3.0.2 @testing-library/cypress@7.0.4 cypress-file-upload@5.0.2 @types/testing-library__cypress@5.0.8 unfetch@4.2.0 @types/cypress-cucumber-preprocessor@4.0.0
 RUN $(npm bin)/cypress verify
 RUN $(npm bin)/cypress install
 
