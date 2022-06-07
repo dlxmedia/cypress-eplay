@@ -12,6 +12,7 @@ RUN npm config -g set user $(whoami)
 RUN npm install cypress@10.0.3
 RUN npm install typescript \
     @cypress/browserify-preprocessor \
+    @ngneat/falso \
     @testing-library/cypress \
     @types/cypress-cucumber-preprocessor \
     @types/testing-library__cypress \
