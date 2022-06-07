@@ -1,15 +1,15 @@
 # https://circleci.com/orbs/registry/orb/circleci/docker
 version: 2.1
 orbs:
-    docker: circleci/docker@1.0.0
+  docker: circleci/docker@1.0.0
 workflows:
-    build_and_publish_docker_image:
-        jobs:
-            -   docker/publish:
-                    image: dlxmedia/docker-cypress
-                    tag: '6.4.0'
-                    extra_build_args: '--build-arg CYPRESS_VERSION=6.4.0 --build-arg BROWSER=node12.18.3-chrome87-ff82'
-            -   docker/publish:
-                    image: dlxmedia/docker-cypress
-                    tag: latest
-                    extra_build_args: '--build-arg CYPRESS_VERSION=6.4.0 --build-arg BROWSER=node12.18.3-chrome87-ff82'
+  build_and_publish_docker_image:
+    jobs:
+      - docker/publish:
+          image: dlxmedia/docker-cypress
+          tag: '9.5.4-node14.17.6-chrome100-ff98'
+          extra_build_args: '--build-arg CYPRESS_VERSION=9.5.4 --build-arg BROWSER=node14.17.6-chrome100-ff98'
+      - docker/publish:
+          image: dlxmedia/docker-cypress
+          tag: latest
+          extra_build_args: '--build-arg CYPRESS_VERSION=9.5.4 --build-arg BROWSER=node14.17.6-chrome100-ff98'
