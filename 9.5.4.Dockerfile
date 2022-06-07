@@ -17,6 +17,7 @@ RUN npm install typescript \
     cypress-cucumber-preprocessor@4.0.3 \
     cypress-file-upload@5.0.2 \
     cypress-xpath@1.6.2 \
+    nanoid@3.1.31 \
     unfetch@4.2.0
 RUN $(npm bin)/cypress verify
 RUN $(npm bin)/cypress install

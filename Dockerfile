@@ -19,6 +19,7 @@ RUN npm install typescript \
     cypress-cucumber-preprocessor \
     cypress-file-upload \
     cypress-xpath \
+    nanoid \
     unfetch
 
 RUN $(npm bin)/cypress verify
