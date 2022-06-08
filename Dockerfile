@@ -5,8 +5,6 @@ FROM cypress/browsers:$BROWSER
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1
 
-WORKDIR /usr/app
-
 RUN echo "whoami: $(whoami)"
 RUN npm config -g set user $(whoami)
 RUN npm install cypress@10.0.3
